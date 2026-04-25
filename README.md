@@ -145,12 +145,6 @@ Detailed documentation is available in the [`docs/`](docs/) folder, covering arc
 
 ---
 
-## Deployment
-
-This project is deployed on Hugging Face Spaces. See the [Deployment Guide](docs/DEPLOYMENT_GUIDE.md) for full step-by-step instructions including how to add API keys as Hugging Face secrets.
-
----
-
 ## Notes
 
 - The Pinecone index is auto-created on first run if it does not already exist
