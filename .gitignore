@@ -8,5 +8,3 @@ __pycache__/
 .gradio/
 gemini_test.py
 cleaned_text.json
-graphics/
-images/

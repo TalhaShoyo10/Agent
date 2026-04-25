@@ -1,3 +1,15 @@
+---
+title: Little Angels Assistant
+emoji: 🏫
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: "5.25.0"
+python_version: "3.10"
+app_file: app.py
+pinned: false
+---
+
 # Little Angels Montessori AI Assistant
 
 An AI-powered school assistant built with Retrieval-Augmented Generation (RAG). It answers questions about Little Angels Montessori from internal school knowledge, supports session-based document uploads for Q&A, and falls back to live web search when needed.
@@ -17,6 +29,16 @@ An AI-powered school assistant built with Retrieval-Augmented Generation (RAG). 
 - **Web Search Fallback** — uses Tavily search when internal retrieval finds nothing relevant
 - **OCR-Based Image Support** — extracts and cleans text from uploaded images and scanned notices *(experimental)*
 - **Session Management** — each user gets an isolated retrieval namespace that is cleaned up after inactivity
+
+---
+
+## Getting Started
+
+Before running the app, you will need to:
+- Set up API keys for Gemini, Pinecone, Tavily, and OCR.space
+- Run the image extraction and ingestion scripts to build the school knowledge base
+
+Full step-by-step instructions are in [Setup And Usage](docs/SETUP_AND_USAGE.md).
 
 ---
 
