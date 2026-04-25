@@ -6,4 +6,4 @@ from pathlib import Path
 css_path = Path(__file__).parent / "school_theme.css"
 get_agent(None)
 get_namespace(None)
-demo.queue().launch(css_paths = css_path)
+demo.queue().launch()

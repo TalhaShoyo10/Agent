@@ -198,8 +198,9 @@ async def chat_function(user_input, history, files, session_id):
 
 
 graphics_dir = Path(__file__).parent.parent / "graphics"
+css_path = Path(__file__).parent.parent / "school_theme.css"
 
-with gr.Blocks() as demo:
+with gr.Blocks(css = css_path) as demo:
     with gr.Row(elem_id="title-row"):
         gr.Image(
             value=str(graphics_dir / "logo.png"),
