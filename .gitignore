@@ -1,0 +1,10 @@
+.env
+venv/
+agent_calls.log
+tavili_test.py
+test_agent.py
+test_retrieval.py
+__pycache__/
+.gradio/
+gemini_test.py
+cleaned_text.json

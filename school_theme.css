@@ -1,0 +1,299 @@
+/* ============================================================
+   Little Angels Montessori — School Theme
+   Targets exact Gradio 6.3.0 DOM structure
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
+
+/* ── 1. Override Gradio's own CSS variables ─────────────── */
+:root,
+.gradio-container {
+  --body-background-fill:        #F5A800 !important;
+  --background-fill-primary:     #FFF8EE !important;
+  --background-fill-secondary:   #FFF3D6 !important;
+  --block-background-fill:       #FFF8EE !important;
+  --block-border-color:          #E8C060 !important;
+  --block-border-width:          2px !important;
+  --block-radius:                16px !important;
+  --color-accent:                #F5A800 !important;
+  --color-accent-soft:           #FFE099 !important;
+  --input-background-fill:       #FFFFFF !important;
+  --input-border-color:          #E8C060 !important;
+  --body-text-color:             #1A1A2E !important;
+  --block-label-text-color:      #8A6800 !important;
+  --shadow-drop:                 0 4px 16px rgba(0,0,0,0.15) !important;
+}
+
+/* ── 2. Page & container background ────────────────────── */
+body,
+gradio-app,
+.gradio-container {
+  background: #F5A800 !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+
+.gradio-container.gradio-container-6-3-0 {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+}
+
+/* ── 3. Title row (logo + heading) ──────────────────────── */
+#title-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background: #D4860A !important;
+  border-radius: 18px 18px 0 0 !important;
+  padding: 16px 24px !important;
+  gap: 16px !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2) !important;
+}
+
+#school-logo {
+  min-width: unset !important;
+  width: 90px !important;
+  flex: 0 0 90px !important;
+  flex-shrink: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  transform: translateY(-3px) !important;
+}
+
+#school-logo .image-container,
+#school-logo .image-frame,
+#school-logo button,
+#school-logo button.svelte-12vrxzd,
+#school-logo .svelte-12vrxzd,
+#school-logo > div,
+#school-logo img {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  mix-blend-mode: multiply !important;
+}
+
+#app-title {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  flex: 1 !important;
+  min-width: unset !important;
+  text-align: center !important;     
+  justify-content: center !important; 
+  transform: translateX(-30px) !important;
+}
+
+#app-title .prose h1 {
+  font-family: 'Fredoka One', cursive !important;
+  font-size: 2rem !important;
+  color: #FFFFFF !important;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.3) !important;
+  margin: 0 0 4px 0 !important;
+  text-align: center !important;
+}
+
+#app-title .prose p {
+  color: #FFF3CC !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+  font-family: 'Nunito', sans-serif !important;
+  text-align: center !important;
+}
+
+/* ── 5. Chat message bubbles ────────────────────────────── */
+/* Bot bubbles */
+#chat-history .bubble-wrap .bot,
+#chat-history .bubble-wrap [data-testid="bot"] {
+  align-self: flex-start !important;
+  background: #FFFFFF !important;
+  border: 2px solid #E0D9CC !important;
+  border-radius: 18px 18px 18px 4px !important;
+  color: #1A1A2E !important;
+  max-width: 92% !important;
+  padding: 10px 15px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+/* User bubbles */
+#chat-history .bubble-wrap .user,
+#chat-history .bubble-wrap [data-testid="user"] {
+  align-self: flex-end !important;
+  background: linear-gradient(135deg, #6EC6F5, #3FA8DC) !important;
+  border: none !important;
+  border-radius: 18px 18px 4px 18px !important;
+  color: #FFFFFF !important;
+  max-width: 92% !important;
+  padding: 10px 15px !important;
+  box-shadow: 0 2px 10px rgba(63,168,220,0.35) !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Hide avatars */
+#chat-history .avatar-container,
+#chat-history .icon-button-wrapper { display: none !important; }
+
+/* ── 6. Inline input row ────────────────────────────────── */
+#input-row {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  background: #FFFFFF !important;
+  border: 2px solid #E8C060 !important;
+  border-top: 3px solid #F5A800 !important;
+  border-radius: 0 0 16px 16px !important;
+  padding: 8px !important;
+  margin-top: 0 !important;
+}
+
+/* ── 7. File upload (inline, compact) ───────────────────── */
+#file-upload {
+  background: #FFE099 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  min-height: unset !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 0 0 48px !important;   
+  width: 48px !important;
+  height: 60px !important;
+  align-self: center !important; 
+  position: relative !important;
+}
+
+#file-upload button {
+  background: #FFE099 !important;
+  border: 2px solid #E8C060 !important;
+  border-radius: 10px !important;
+  color: #8A6800 !important;
+  font-size: 1.2rem !important;
+  width: 48px !important;
+  height: 48px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#file-upload button:hover {
+  background: #F5C842 !important;
+}
+
+#file-upload .icon-wrap svg {
+  stroke: #F5A800 !important;
+}
+
+/* ── 8. Textbox input ───────────────────────────────────── */
+#chat-input {
+  background: #FFFFFF !important;
+  border: none !important;
+  border-radius: 8px !important;
+  margin: 0 !important;
+}
+
+#chat-input .input-container {
+  background: #FFFFFF !important;
+}
+
+#chat-input textarea {
+  background: #FFFFFF !important;
+  color: #1A1A2E !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.97rem !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 10px 12px !important;
+  caret-color: #F5A800 !important;
+}
+
+#chat-input textarea::placeholder {
+  color: #B0A080 !important;
+}
+
+/* ── 9. Footer ──────────────────────────────────────────── */
+footer.svelte-zxu34v {
+  background: #F5A800 !important;
+  border-top: 2px solid #D4860A !important;
+  padding: 8px !important;
+  display: none !important;
+}
+
+footer.svelte-zxu34v button,
+footer.svelte-zxu34v a {
+  color: #5C3D00 !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.85rem !important;
+}
+
+/* ── 10. Scrollbar ──────────────────────────────────────── */
+#chat-history .wrapper::-webkit-scrollbar { width: 6px; }
+#chat-history .wrapper::-webkit-scrollbar-track { background: transparent; }
+#chat-history .wrapper::-webkit-scrollbar-thumb {
+  background: #F5C842;
+  border-radius: 10px;
+}
+
+/* ── 11. Responsive ─────────────────────────────────────── */
+@media (max-width: 600px) {
+  #app-title .prose h1 { font-size: 1.4rem !important; }
+  #chat-history .bubble-wrap .bot,
+  #chat-history .bubble-wrap .user { max-width: 96% !important; }
+  #school-logo img { width: 50px !important; height: 50px !important; }
+}
+
+/* ── 12. Logo background fix ────────────────────────────── */
+#school-logo,
+#school-logo * {
+  background: transparent !important;
+  background-color: transparent !important;
+  mix-blend-mode: normal !important;
+}
+
+#school-logo .image-frame.svelte-12vrxzd {
+  background: transparent !important;
+}
+
+#school-logo button {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ── 13. File upload hover tooltip ─────────────────────── */
+#file-upload::after {
+  content: "📎 Accepted: PNG, JPG, JPEG, PDF, TXT only" !important;
+  position: absolute !important;
+  bottom: calc(100% + 8px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: #5C3D00 !important;
+  color: #FFF8EE !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.75rem !important;
+  padding: 6px 10px !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s !important;
+  z-index: 100 !important;
+}
+
+#file-upload:hover::after {
+  opacity: 1 !important;
+}

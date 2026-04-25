@@ -1,0 +1,12 @@
+langchain
+langchain-huggingface
+langchain-pinecone
+langchain-google-genai
+google-generativeai
+gradio
+pypdf
+python-dotenv
+tavily-python
+pinecone-client
+sentence-transformers
+huggingface-hub
