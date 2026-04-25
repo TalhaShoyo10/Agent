@@ -1,14 +1,3 @@
----
-title: Little Angels Assistant
-emoji: 🏫
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: 5.25.0
-python_version: "3.10"
-app_file: app.py
-pinned: false
----
 # Little Angels Montessori AI Assistant
 
 An AI-powered school assistant built with Retrieval-Augmented Generation (RAG). It answers questions about Little Angels Montessori from internal school knowledge, supports session-based document uploads for Q&A, and falls back to live web search when needed.
@@ -17,7 +6,7 @@ An AI-powered school assistant built with Retrieval-Augmented Generation (RAG). 
 
 ## Demo
 
-> Hosted on Hugging Face Spaces — [link coming soon]
+> **Live Demo:** [Little Angels Montessori Assistant](https://talhashoyo10-little-angels-assistant.hf.space)
 
 ---
 
