@@ -208,7 +208,9 @@ with gr.Blocks() as demo:
             container=False,
             width=80,
             height=80,
-            buttons=[]
+            interactive=False,
+            show_download_button=False,
+            show_fullscreen_button=False,
         )
         gr.Markdown(
             "# Little Angels Montessori Assistant\nAsk about school timings, admissions and any other details you are curious about",
