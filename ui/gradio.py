@@ -192,7 +192,15 @@ async def chat_function(user_input, history, files, session_id):
             "messages": [HumanMessage(content=user_query)]
         })
 
-    ai_text = response["messages"][-1].content[0]["text"]
+    last_message = response["messages"][-1]
+    content = last_message.content
+
+    if isinstance(content, str):
+        ai_text = content
+    elif isinstance(content, list) and len(content) > 0:
+        ai_text = content[0].get("text", "") if isinstance(content[0], dict) else content[0]
+    else:
+        ai_text = "I'm sorry, I could not generate a response."
     history[-1]["content"] = ai_text
     yield history, "", session_id
 
