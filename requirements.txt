@@ -1,4 +1,5 @@
 langchain
+langchain-community
 langchain-huggingface
 langchain-pinecone
 langchain-google-genai
@@ -10,3 +11,5 @@ tavily-python
 pinecone-client
 sentence-transformers
 huggingface-hub
+langchain-text-splitters
+requests
